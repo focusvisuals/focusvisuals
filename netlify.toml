@@ -1,0 +1,12 @@
+[build]
+publish = "."
+
+# Local dev via `netlify dev` (optional)
+[dev]
+publish = "."
+
+# Sensible default caching
+[[headers]]
+for = "/*"
+  [headers.values]
+  Cache-Control = "public, max-age=0, must-revalidate"

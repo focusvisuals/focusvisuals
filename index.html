@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Focus Visuals</title>
+    <meta name="description" content="Creative video and photo production. Let's focus on the visuals." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="#home">Focus Visuals</a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <nav class="nav-links" role="navigation">
+          <a href="#services">Services</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#about">About</a>
+          <a class="btn btn--primary" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container">
+          <h1>Let's focus on the visuals</h1>
+          <p>We craft cinematic stories and crisp imagery for brands, creators, and events.</p>
+          <div class="actions">
+            <a class="btn btn--primary" href="#contact">Get a quote</a>
+            <a class="btn btn--ghost" href="#portfolio">View work</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section">
+        <div class="container">
+          <h2>Services</h2>
+          <div class="grid cards">
+            <article class="card">
+              <h3>Video Production</h3>
+              <p>Concept to delivery: scripting, shooting, lighting, and sound.</p>
+            </article>
+            <article class="card">
+              <h3>Photography</h3>
+              <p>Products, portraits, and events with attention to detail.</p>
+            </article>
+            <article class="card">
+              <h3>Editing &amp; Post</h3>
+              <p>Color grading, motion graphics, and sound design for polish.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="section section--alt">
+        <div class="container">
+          <h2>Portfolio</h2>
+          <div class="grid gallery">
+            <figure class="tile"><div class="ph"></div><figcaption>Commercial</figcaption></figure>
+            <figure class="tile"><div class="ph"></div><figcaption>Event</figcaption></figure>
+            <figure class="tile"><div class="ph"></div><figcaption>Product</figcaption></figure>
+            <figure class="tile"><div class="ph"></div><figcaption>Portrait</figcaption></figure>
+            <figure class="tile"><div class="ph"></div><figcaption>Behind the scenes</figcaption></figure>
+            <figure class="tile"><div class="ph"></div><figcaption>Short film</figcaption></figure>
+          </div>
+          <p class="muted">Replace placeholders with your images or video thumbnails.</p>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <h2>About</h2>
+          <p>Focus Visuals is a creative studio dedicated to visuals that move people. We combine planning, craft, and post-production excellence to deliver on time and on brand.</p>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <h2>Contact</h2>
+          <form class="contact-form" name="contact">
+            <div class="grid">
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" required />
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" required />
+              </label>
+            </div>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+            <button class="btn btn--primary" type="submit">Send</button>
+          </form>
+          <p class="muted">Or email us at <a href="mailto:hello@focusvisuals.pro">hello@focusvisuals.pro</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Focus Visuals</p>
+        <div class="social">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="YouTube">YouTube</a>
+          <a href="#" aria-label="TikTok">TikTok</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
