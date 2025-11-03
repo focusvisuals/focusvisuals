@@ -5,62 +5,157 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Services - Focus Visuals</title>
     <meta name="description" content="Video production, photography, and editing services." />
-    <link rel="icon" type="image/svg+xml" href="icon.svg" />
+    <link rel="icon" type="image/png" href="icon.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="page-template">
     <header class="site-header">
-      <div class="container nav">
-        <a class="brand" href="home.html">
-          <img src="logo.svg" alt="Focus Visuals" />
+      <div class="container">
+        <a class="brand" href="index.html">
+          <img src="logo.png" alt="Focus Visuals" />
         </a>
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-        <nav class="nav-links" role="navigation">
-          <a href="home.html">Home</a>
-          <a href="services.html">Services</a>
-          <a href="portfolio.html">Portfolio</a>
-          <a href="our-story.html">Our Story</a>
-          <a class="btn btn--primary" href="contact.html">Get in Touch</a>
-        </nav>
+        <div class="menu-wrapper">
+          <div class="menu-toggle">
+            <img src="camera.png" alt="Menu" class="aperture-icon" />
+          </div>
+          <nav class="dropdown-menu" role="navigation">
+            <a href="services.html" class="menu-item">Precision. Emotion. Impact.</a>
+            <a href="our-story.html" class="menu-item">The Focus Behind the Frame</a>
+            <a href="contact.html" class="menu-item">Let's Talk</a>
+          </nav>
+        </div>
       </div>
     </header>
 
     <main>
-      <section class="section" style="padding-top: 120px;">
+      <section class="section" style="padding-top: 180px;">
         <div class="container">
-          <h2>Services</h2>
-          <div class="grid cards">
-            <article class="card">
-              <img src="icon.svg" alt="" class="icon" />
-              <h3>Video Production</h3>
-              <p>Concept to delivery: scripting, shooting, lighting, and sound.</p>
+          <h2 class="services-headline">Precision. Emotion. Impact.</h2>
+          <p class="services-subheadline">We don't just produce videos — we engineer moments that connect, stir, and stay with your audience.</p>
+          
+          <div class="services-grid">
+            <!-- Row 1 -->
+            <article class="service-card">
+              <img src="videography.png" alt="" class="service-icon" />
+              <h3>Corporate Video Production</h3>
+              <p>Your brand deserves more than just a video — it deserves a story that resonates. Our corporate video production service transforms your message into a visual experience that connects with your audience. From concept development to final delivery, we focus on clarity, creativity, and precision. Every frame is designed to reflect your values and engage viewers in a way that strengthens your brand identity.</p>
+              <a href="#" class="service-link" data-service="corporate">Get the Full Picture</a>
             </article>
-            <article class="card">
-              <img src="icon.svg" alt="" class="icon" />
-              <h3>Photography</h3>
-              <p>Products, portraits, and events with attention to detail.</p>
+            
+            <article class="service-card">
+              <img src="marketing.png" alt="" class="service-icon" />
+              <h3>Promotional & Marketing Videos</h3>
+              <p>When it comes to marketing, attention is everything. We create promotional videos that not only showcase your products or services but also inspire action. By blending strategic messaging with cinematic storytelling, we craft content that stands out in a crowded digital space and leaves a lasting impression. Whether for campaigns, product launches, or brand awareness, our videos are designed to captivate, connect, and convert.</p>
+              <a href="#" class="service-link" data-service="promotional">Get the Full Picture</a>
             </article>
-            <article class="card">
-              <img src="icon.svg" alt="" class="icon" />
-              <h3>Editing &amp; Post</h3>
-              <p>Color grading, motion graphics, and sound design for polish.</p>
+            
+            <!-- Row 2 -->
+            <article class="service-card">
+              <img src="training.png" alt="" class="service-icon" />
+              <h3>Training & Internal Communication Videos</h3>
+              <p>Clear communication is the backbone of any successful organization. Our training and internal communication videos simplify complex ideas and deliver them in a format that's easy to understand and retain. From onboarding new employees to sharing company updates, we create content that informs, educates, and aligns your team.</p>
+              <a href="#" class="service-link" data-service="training">Get the Full Picture</a>
+            </article>
+            
+            <article class="service-card">
+              <img src="body-organ.png" alt="" class="service-icon" />
+              <h3>Strategy & Consulting</h3>
+              <p>Before the cameras roll, clarity matters. Our Strategy & Consulting service helps you define your message, identify your audience, and choose the right approach for maximum impact. From concept development to distribution planning, we guide you through every decision to ensure your video isn't just beautiful — it's effective.</p>
+              <a href="#" class="service-link" data-service="strategy">Get the Full Picture</a>
+            </article>
+            
+            <!-- Row 3 - Coming Soon -->
+            <article class="service-card coming-soon">
+              <span class="coming-soon-badge">COMING SOON</span>
+              <img src="advertising.png" alt="" class="service-icon" />
+              <h3>Social Media Content</h3>
+              <p>We're working on something dynamic for your social platforms. Soon, we'll offer short, engaging videos optimized for Instagram, LinkedIn, TikTok, and more — designed to grab attention and spark conversation. Stay tuned for content that's creative, strategic, and built for impact.</p>
+              <a href="#" class="service-link" data-service="social">Get the Full Picture</a>
+            </article>
+            
+            <article class="service-card coming-soon">
+              <span class="coming-soon-badge">COMING SOON</span>
+              <img src="red-carpet.png" alt="" class="service-icon" />
+              <h3>Event Coverage</h3>
+              <p>Capturing the energy and highlights of your events is next on our horizon. We're developing a service that will bring conferences, launches, and celebrations to life through polished, professional video coverage. These videos will help you share key moments internally and across your marketing channels, extending the value of your event long after it ends.</p>
+              <a href="#" class="service-link" data-service="event">Get the Full Picture</a>
             </article>
           </div>
+          
+          <a href="contact.html" class="services-cta">Ready to elevate your brand with video?</a>
         </div>
       </section>
     </main>
 
+    <!-- Modal -->
+    <div id="serviceModal" class="modal">
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <div class="modal-icon" id="modalIcon"></div>
+        <h2 id="modalTitle"></h2>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+
     <footer class="site-footer">
       <div class="container">
-        <p>© <span id="year"></span> Focus Visuals</p>
-        <div class="social">
-          <a href="#" aria-label="Instagram">Instagram</a>
-          <a href="#" aria-label="YouTube">YouTube</a>
-          <a href="#" aria-label="TikTok">TikTok</a>
-        </div>
+        <p>© <span id="year"></span> Focus Visuals. All rights reserved.</p>
       </div>
     </footer>
 
+    <!-- Chat Bubble -->
+    <div class="chat-bubble" id="chatBubble" title="Contact Us">
+      <img src="speech-bubble.png" alt="Chat" />
+    </div>
+
+    <!-- Chat Popup -->
+    <div class="chat-popup" id="chatPopup">
+      <div class="chat-popup-header">
+        <h3>Let's Talk</h3>
+        <span class="chat-popup-close" id="chatPopupClose">&times;</span>
+      </div>
+      <div class="chat-popup-body" id="chatPopupBody">
+        <div class="chat-messages" id="chatMessages">
+          <div class="chat-message chat-message-received">
+            <div class="chat-message-text">Hi! 👋 Ready to bring your vision to life?</div>
+          </div>
+        </div>
+        <div class="chat-actions" id="chatActions">
+          <button class="chat-action-btn" id="startConversation">Start a Conversation</button>
+          <a href="services.html" class="chat-action-btn chat-action-btn-secondary">Explore Services</a>
+        </div>
+        <div class="chat-input-wrapper" id="chatInputWrapper" style="display: none;">
+          <input type="text" class="chat-input" id="chatInput" placeholder="Type your message..." />
+          <button class="chat-send-btn" id="chatSendBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
     <script src="script.js"></script>
+<a class="watermark-badge" href="mailto:info@focusvisuals.pro?subject=My%20take%20on%20your%20website%20design&body=Hi%0A%0AI%20just%20visited%20your%20website%20and%20wanted%20to%20share%20some%20thoughts%20on%20the%20design%20—%20consider%20this%20my%20mini%20director’s%20commentary!%0A%0A🎬%20What%20I%20loved:%0A[Insert%20your%20favorite%20design%20elements%20—%20layout,%20visuals,%20vibe,%20etc.]%0A%0A🛠%20What%20could%20use%20a%20touch-up:%0A[Share%20any%20suggestions%20or%20areas%20that%20felt%20off]%0A%0A💡%20Bonus%20idea:%0A[Got%20a%20creative%20suggestion?%20Drop%20it%20here!]%0A%0AYour%20work%20already%20tells%20powerful%20stories%20—%20just%20thought%20I’d%20help%20fine-tune%20the%20stage%20it’s%20set%20on.%0A%0ACheers,%20%20%0A[Your%20Name]" aria-label="Email us" title="Email us">
+      <div class="watermark-circle">
+        <img src="watermark.png" alt="" class="watermark-icon" />
+        <div class="watermark-text" style="transform: rotate(45deg);">
+          <svg viewBox="0 0 100 100">
+            <defs>
+              <path id="wmTop" d="M50,50 m-34,0 a34,34 0 1,1 68,0 a34,34 0 1,1 -68,0" />
+            </defs>
+            <text text-anchor="middle">
+              <textPath xlink:href="#wmTop" startOffset="25%">we are working on something bigger</textPath>
+            </text>
+            <text text-anchor="middle">
+              <textPath xlink:href="#wmTop" startOffset="75%">any comment's? let us know</textPath>
+            </text>
+          </svg>
+        </div>
+      </div>
+    </a>
+
+    <script src="services-modal.js"></script>
   </body>
 </html>

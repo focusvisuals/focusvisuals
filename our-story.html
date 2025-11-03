@@ -5,45 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Our Story - Focus Visuals</title>
     <meta name="description" content="Learn about Focus Visuals and our creative studio." />
-    <link rel="icon" type="image/svg+xml" href="icon.svg" />
+    <link rel="icon" type="image/png" href="icon.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="page-template">
     <header class="site-header">
-      <div class="container nav">
-        <a class="brand" href="home.html">
-          <img src="logo.svg" alt="Focus Visuals" />
+      <div class="container">
+        <a class="brand" href="index.html">
+          <img src="logo.png" alt="Focus Visuals" />
         </a>
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-        <nav class="nav-links" role="navigation">
-          <a href="home.html">Home</a>
-          <a href="services.html">Services</a>
-          <a href="portfolio.html">Portfolio</a>
-          <a href="our-story.html">Our Story</a>
-          <a class="btn btn--primary" href="contact.html">Get in Touch</a>
-        </nav>
+        <div class="menu-wrapper">
+          <div class="menu-toggle">
+            <img src="camera.png" alt="Menu" class="aperture-icon" />
+          </div>
+          <nav class="dropdown-menu" role="navigation">
+            <a href="services.html" class="menu-item">Precision. Emotion. Impact.</a>
+            <a href="our-story.html" class="menu-item">The Focus Behind the Frame</a>
+            <a href="contact.html" class="menu-item">Let's Talk</a>
+          </nav>
+        </div>
       </div>
     </header>
 
     <main>
-      <section class="section" style="padding-top: 120px;">
+      <section class="section" style="padding-top: 180px;">
         <div class="container">
-          <h2>Our Story</h2>
-          <p>Focus Visuals is a creative studio dedicated to visuals that move people. We combine planning, craft, and post-production excellence to deliver on time and on brand.</p>
+          <h2 class="story-headline">
+            <span class="line1">A <em class="highlight">Perspective</em> of the Past.</span>
+            <span class="line2">A <em class="highlight">Vision</em> of Today.</span>
+          </h2>
+          <div class="story-columns">
+            <div class="story-column">
+              <h3>Born Observing</h3>
+              <p>From the start, Focus Visuals was built on a mindset of deep observation and emotional awareness. Our founders have always been drawn to the subtle details — the quiet moments, the unspoken reactions, the energy beneath the surface. This instinct to look closer, to understand what others are feeling, became the lens through which we view the world.</p>
+              <p>It wasn't just about empathy — it was about perception. Even when watching films, videos, or everyday scenes, the focus was never just on the main subject. It was on everything else: the background, the lighting, the pacing, the atmosphere. The small details spoke just as loudly as the central action. That way of seeing — of absorbing the full frame — shaped our understanding of how powerful visuals can be when crafted with intention.</p>
+              <p>That belief continues to guide everything we create.</p>
+            </div>
+            <div class="story-column">
+              <h3>Driven by Vision</h3>
+              <p>At Focus Visuals, observation evolves into execution. What began as a deep sensitivity to detail has grown into a creative process rooted in clarity, intention, and impact.</p>
+              <p>Through years of studying videos — from cinematic masterpieces to everyday content — we came to understand something profound: video is the most powerful tool to deliver a message. It engages the senses, evokes emotion, and creates connection in ways that words alone cannot.</p>
+              <p>Today, we specialize in corporate video production that transforms ideas into compelling visual narratives. Every frame is crafted with purpose — not just to inform, but to resonate. We combine strategic thinking with cinematic precision to help brands communicate authentically and memorably.</p>
+              <p>Our work is guided by the belief that when you understand your audience, you can truly move them. That's why we don't just produce content — we create experiences that stay with people.</p>
+            </div>
+          </div>
+          <a href="contact.html" class="story-cta" data-hover-line1="Great move!!" data-hover-line2="Click to continue">Ready to tell your story?</a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container">
-        <p>© <span id="year"></span> Focus Visuals</p>
-        <div class="social">
-          <a href="#" aria-label="Instagram">Instagram</a>
-          <a href="#" aria-label="YouTube">YouTube</a>
-          <a href="#" aria-label="TikTok">TikTok</a>
-        </div>
+        <p>© <span id="year"></span> Focus Visuals. All rights reserved.</p>
       </div>
     </footer>
+
+    <!-- Chat Bubble -->
+    <div class="chat-bubble" id="chatBubble" title="Contact Us">
+      <img src="speech-bubble.png" alt="Chat" />
+    </div>
+
+    <!-- Chat Popup -->
+    <div class="chat-popup" id="chatPopup">
+      <div class="chat-popup-header">
+        <h3>Let's Talk</h3>
+        <span class="chat-popup-close" id="chatPopupClose">&times;</span>
+      </div>
+      <div class="chat-popup-body" id="chatPopupBody">
+        <div class="chat-messages" id="chatMessages">
+          <div class="chat-message chat-message-received">
+            <div class="chat-message-text">Hi! 👋 Ready to bring your vision to life?</div>
+          </div>
+        </div>
+        <div class="chat-actions" id="chatActions">
+          <button class="chat-action-btn" id="startConversation">Start a Conversation</button>
+          <a href="services.html" class="chat-action-btn chat-action-btn-secondary">Explore Services</a>
+        </div>
+        <div class="chat-input-wrapper" id="chatInputWrapper" style="display: none;">
+          <input type="text" class="chat-input" id="chatInput" placeholder="Type your message..." />
+          <button class="chat-send-btn" id="chatSendBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+<a class="watermark-badge" href="mailto:info@focusvisuals.pro?subject=My%20take%20on%20your%20website%20design&body=Hi%0A%0AI%20just%20visited%20your%20website%20and%20wanted%20to%20share%20some%20thoughts%20on%20the%20design%20—%20consider%20this%20my%20mini%20director’s%20commentary!%0A%0A🎬%20What%20I%20loved:%0A[Insert%20your%20favorite%20design%20elements%20—%20layout,%20visuals,%20vibe,%20etc.]%0A%0A🛠%20What%20could%20use%20a%20touch-up:%0A[Share%20any%20suggestions%20or%20areas%20that%20felt%20off]%0A%0A💡%20Bonus%20idea:%0A[Got%20a%20creative%20suggestion?%20Drop%20it%20here!]%0A%0AYour%20work%20already%20tells%20powerful%20stories%20—%20just%20thought%20I’d%20help%20fine-tune%20the%20stage%20it’s%20set%20on.%0A%0ACheers,%20%20%0A[Your%20Name]" aria-label="Email us" title="Email us">
+      <div class="watermark-circle">
+        <img src="watermark.png" alt="" class="watermark-icon" />
+        <div class="watermark-text" style="transform: rotate(45deg);">
+          <svg viewBox="0 0 100 100">
+            <defs>
+              <path id="wmTop" d="M50,50 m-34,0 a34,34 0 1,1 68,0 a34,34 0 1,1 -68,0" />
+            </defs>
+            <text text-anchor="middle">
+              <textPath xlink:href="#wmTop" startOffset="25%">we are working on something bigger</textPath>
+            </text>
+            <text text-anchor="middle">
+              <textPath xlink:href="#wmTop" startOffset="75%">any comment's? let us know</textPath>
+            </text>
+          </svg>
+        </div>
+      </div>
+    </a>
 
     <script src="script.js"></script>
   </body>

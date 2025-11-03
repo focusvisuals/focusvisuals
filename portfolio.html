@@ -5,23 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portfolio - Focus Visuals</title>
     <meta name="description" content="View our creative work and projects." />
-    <link rel="icon" type="image/svg+xml" href="icon.svg" />
+    <link rel="icon" type="image/png" href="icon.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="page-template">
     <header class="site-header">
-      <div class="container nav">
-        <a class="brand" href="home.html">
-          <img src="logo.svg" alt="Focus Visuals" />
+      <div class="container">
+        <a class="brand" href="index.html">
+          <img src="logo.png" alt="Focus Visuals" />
         </a>
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-        <nav class="nav-links" role="navigation">
-          <a href="home.html">Home</a>
-          <a href="services.html">Services</a>
-          <a href="portfolio.html">Portfolio</a>
-          <a href="our-story.html">Our Story</a>
-          <a class="btn btn--primary" href="contact.html">Get in Touch</a>
-        </nav>
+        <div class="menu-wrapper">
+          <div class="menu-toggle">
+            <img src="camera.png" alt="Menu" class="aperture-icon" />
+          </div>
+          <nav class="dropdown-menu" role="navigation">
+            <a href="services.html" class="menu-item">Precision. Emotion. Impact.</a>
+            <a href="our-story.html" class="menu-item">The Focus Behind the Frame</a>
+            <a href="contact.html" class="menu-item">Let's Talk</a>
+          </nav>
+        </div>
       </div>
     </header>
 
@@ -29,30 +31,131 @@
       <section class="section section--alt" style="padding-top: 120px;">
         <div class="container">
           <h2>Portfolio</h2>
-          <div class="grid gallery">
-            <figure class="tile"><div class="ph"></div><figcaption>Commercial</figcaption></figure>
-            <figure class="tile"><div class="ph"></div><figcaption>Event</figcaption></figure>
-            <figure class="tile"><div class="ph"></div><figcaption>Product</figcaption></figure>
-            <figure class="tile"><div class="ph"></div><figcaption>Portrait</figcaption></figure>
-            <figure class="tile"><div class="ph"></div><figcaption>Behind the scenes</figcaption></figure>
-            <figure class="tile"><div class="ph"></div><figcaption>Short film</figcaption></figure>
+
+          <!-- Filters -->
+          <div class="filters" role="tablist" aria-label="Filter portfolio">
+            <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button class="filter-btn" data-filter="commercial" role="tab" aria-selected="false">Commercial</button>
+            <button class="filter-btn" data-filter="event" role="tab" aria-selected="false">Event</button>
+            <button class="filter-btn" data-filter="product" role="tab" aria-selected="false">Product</button>
+            <button class="filter-btn" data-filter="portrait" role="tab" aria-selected="false">Portrait</button>
+            <button class="filter-btn" data-filter="bts" role="tab" aria-selected="false">Behind the scenes</button>
+            <button class="filter-btn" data-filter="short" role="tab" aria-selected="false">Short film</button>
           </div>
-          <p class="muted">Replace placeholders with your images or video thumbnails.</p>
+
+          <!-- Grid -->
+          <div class="portfolio-grid">
+            <!-- Example items (replace src/href with your thumbnails and links) -->
+            <figure class="portfolio-item" data-category="commercial">
+              <button class="portfolio-card" data-title="Brand Commercial" data-type="video" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ" aria-label="Open Brand Commercial">
+                <div class="thumb ph"></div>
+                <figcaption>
+                  <h3>Brand Commercial</h3>
+                  <p>High-impact storytelling for launch</p>
+                  <span class="chip">Commercial</span>
+                </figcaption>
+              </button>
+            </figure>
+
+            <figure class="portfolio-item" data-category="event">
+              <button class="portfolio-card" data-title="Conference Highlights" data-type="video" data-video="https://player.vimeo.com/video/76979871" aria-label="Open Conference Highlights">
+                <div class="thumb ph"></div>
+                <figcaption>
+                  <h3>Conference Highlights</h3>
+                  <p>Capturing moments and momentum</p>
+                  <span class="chip">Event</span>
+                </figcaption>
+              </button>
+            </figure>
+
+            <figure class="portfolio-item" data-category="product">
+              <button class="portfolio-card" data-title="Product Reveal" data-type="image" data-image="placeholder-1200x675.png" aria-label="Open Product Reveal">
+                <div class="thumb ph"></div>
+                <figcaption>
+                  <h3>Product Reveal</h3>
+                  <p>Precision visuals, clean aesthetic</p>
+                  <span class="chip">Product</span>
+                </figcaption>
+              </button>
+            </figure>
+
+            <figure class="portfolio-item" data-category="portrait">
+              <button class="portfolio-card" data-title="Director Portraits" data-type="image" data-image="placeholder-1200x1500.png" aria-label="Open Director Portraits">
+                <div class="thumb ph"></div>
+                <figcaption>
+                  <h3>Director Portraits</h3>
+                  <p>Character-driven stills</p>
+                  <span class="chip">Portrait</span>
+                </figcaption>
+              </button>
+            </figure>
+
+            <figure class="portfolio-item" data-category="bts">
+              <button class="portfolio-card" data-title="On Set: BTS" data-type="image" data-image="placeholder-1600x900.png" aria-label="Open On Set: BTS">
+                <div class="thumb ph"></div>
+                <figcaption>
+                  <h3>On Set: BTS</h3>
+                  <p>The craft behind the frame</p>
+                  <span class="chip">BTS</span>
+                </figcaption>
+              </button>
+            </figure>
+
+            <figure class="portfolio-item" data-category="short">
+              <button class="portfolio-card" data-title="Short Film: Echo" data-type="video" data-video="https://www.youtube.com/embed/aqz-KE-bpKQ" aria-label="Open Short Film: Echo">
+                <div class="thumb ph"></div>
+                <figcaption>
+                  <h3>Short Film: Echo</h3>
+                  <p>Emotion in motion</p>
+                  <span class="chip">Short</span>
+                </figcaption>
+              </button>
+            </figure>
+          </div>
+
+          <p class="muted" style="margin-top: 16px;">Swap placeholders with your thumbnails and video/image links.</p>
         </div>
       </section>
     </main>
 
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" aria-modal="true" role="dialog" aria-hidden="true">
+      <div class="lightbox-content" role="document">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close">×</button>
+        <div class="lightbox-media" id="lightboxMedia"></div>
+        <div class="lightbox-meta">
+          <h3 id="lightboxTitle"></h3>
+          <p id="lightboxDesc" class="muted"></p>
+        </div>
+      </div>
+    </div>
+
     <footer class="site-footer">
       <div class="container">
-        <p>© <span id="year"></span> Focus Visuals</p>
-        <div class="social">
-          <a href="#" aria-label="Instagram">Instagram</a>
-          <a href="#" aria-label="YouTube">YouTube</a>
-          <a href="#" aria-label="TikTok">TikTok</a>
-        </div>
+        <p>© <span id="year"></span> Focus Visuals. All rights reserved.</p>
       </div>
     </footer>
 
     <script src="script.js"></script>
+<a class="watermark-badge" href="mailto:info@focusvisuals.pro?subject=My%20take%20on%20your%20website%20design&body=Hi%0A%0AI%20just%20visited%20your%20website%20and%20wanted%20to%20share%20some%20thoughts%20on%20the%20design%20—%20consider%20this%20my%20mini%20director’s%20commentary!%0A%0A🎬%20What%20I%20loved:%0A[Insert%20your%20favorite%20design%20elements%20—%20layout,%20visuals,%20vibe,%20etc.]%0A%0A🛠%20What%20could%20use%20a%20touch-up:%0A[Share%20any%20suggestions%20or%20areas%20that%20felt%20off]%0A%0A💡%20Bonus%20idea:%0A[Got%20a%20creative%20suggestion?%20Drop%20it%20here!]%0A%0AYour%20work%20already%20tells%20powerful%20stories%20—%20just%20thought%20I’d%20help%20fine-tune%20the%20stage%20it’s%20set%20on.%0A%0ACheers,%20%20%0A[Your%20Name]" aria-label="Email us" title="Email us">
+      <div class="watermark-circle">
+        <img src="watermark.png" alt="" class="watermark-icon" />
+        <div class="watermark-text" style="transform: rotate(45deg);">
+          <svg viewBox="0 0 100 100">
+            <defs>
+              <path id="wmTop" d="M50,50 m-34,0 a34,34 0 1,1 68,0 a34,34 0 1,1 -68,0" />
+            </defs>
+            <text text-anchor="middle">
+              <textPath xlink:href="#wmTop" startOffset="25%">we are working on something bigger</textPath>
+            </text>
+            <text text-anchor="middle">
+              <textPath xlink:href="#wmTop" startOffset="75%">any comment's? let us know</textPath>
+            </text>
+          </svg>
+        </div>
+      </div>
+    </a>
+
+    <script src="portfolio.js"></script>
   </body>
 </html>

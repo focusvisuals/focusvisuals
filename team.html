@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Focus Visuals - Home</title>
-    <meta name="description" content="Creative video and photo production. Let's focus on the visuals." />
+    <title>Our Team - Focus Visuals</title>
+    <meta name="description" content="Meet the creative minds behind Focus Visuals." />
     <link rel="icon" type="image/png" href="icon.png" />
-    <link rel="stylesheet" href="styles.css?v=2" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="home">
+  <body class="page-template">
     <header class="site-header">
       <div class="container">
         <a class="brand" href="index.html">
@@ -28,23 +28,57 @@
     </header>
 
     <main>
-      <section class="hero">
-        <div class="bg-video">
-          <video id="bgVideoA" class="bg-video__media is-active" autoplay muted playsinline preload="auto" poster="hero-bg.png"></video>
-          <video id="bgVideoB" class="bg-video__media" autoplay muted playsinline preload="auto" poster="hero-bg.png"></video>
-        </div>
-        <div class="play-button-center" id="playButton">
-          <img src="play-button.png" alt="Play" />
-        </div>
-        <div class="hero-content">
-          <div class="hero-text">
-            <h1 class="hero-headline">
-              <span class="hero-word">LET'S FOCUS ON THE VISUALS</span>
-            </h1>
-            <p class="hero-subheadline">We bring your message into focus through visuals that connect, inspire, and perform</p>
-            <div class="hero-links">
-              <a href="contact.html" class="hero-link">Every Great Story Starts with a Conversation</a>
-            </div>
+      <section class="section" style="padding-top: 180px;">
+        <div class="container">
+          <h2 class="team-headline">Meet the Visionaries</h2>
+          <p class="team-subheadline">The creative minds bringing your vision into focus</p>
+          
+          <div class="team-grid">
+            <!-- Team Member 1 -->
+            <article class="team-card">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Anderson" class="team-photo" />
+              <div class="team-overlay">
+                <h3 class="team-name">Michael Anderson</h3>
+                <p class="team-role">Founder & Creative Director</p>
+                <p class="team-bio">Bringing years of experience in visual storytelling, Michael leads the creative vision at Focus Visuals with a passion for crafting narratives that resonate and inspire.</p>
+              </div>
+            </article>
+
+            <!-- Team Member 2 -->
+            <article class="team-card">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Martinez" class="team-photo" />
+              <div class="team-overlay">
+                <h3 class="team-name">Sarah Martinez</h3>
+                <p class="team-role">Lead Producer</p>
+                <p class="team-bio">With a keen eye for detail and a commitment to excellence, Sarah ensures every project is executed flawlessly from concept to completion.</p>
+              </div>
+            </article>
+
+            <!-- Team Member 3 -->
+            <article class="team-card">
+              <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="David Chen" class="team-photo" />
+              <div class="team-overlay">
+                <h3 class="team-name">David Chen</h3>
+                <p class="team-role">Director of Photography</p>
+                <p class="team-bio">An artist behind the lens, David transforms ideas into stunning visual experiences that capture emotion and tell powerful stories.</p>
+              </div>
+            </article>
+
+            <!-- Team Member 4 -->
+            <article class="team-card">
+              <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emma Thompson" class="team-photo" />
+              <div class="team-overlay">
+                <h3 class="team-name">Emma Thompson</h3>
+                <p class="team-role">Senior Editor</p>
+                <p class="team-bio">Specializing in post-production magic, Emma brings stories to life through precise editing and creative vision.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="team-cta-section">
+            <h3 class="team-cta-headline">Ready to Work With Us?</h3>
+            <p class="team-cta-text">Let's create something amazing together</p>
+            <a href="contact.html" class="btn btn--primary">Start Your Story</a>
           </div>
         </div>
       </section>

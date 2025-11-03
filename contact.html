@@ -5,63 +5,211 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Get in Touch - Focus Visuals</title>
     <meta name="description" content="Contact us for your next project." />
-    <link rel="icon" type="image/svg+xml" href="icon.svg" />
+    <link rel="icon" type="image/png" href="icon.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="page-template">
     <header class="site-header">
-      <div class="container nav">
-        <a class="brand" href="home.html">
-          <img src="logo.svg" alt="Focus Visuals" />
+      <div class="container">
+        <a class="brand" href="index.html">
+          <img src="logo.png" alt="Focus Visuals" />
         </a>
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-        <nav class="nav-links" role="navigation">
-          <a href="home.html">Home</a>
-          <a href="services.html">Services</a>
-          <a href="portfolio.html">Portfolio</a>
-          <a href="our-story.html">Our Story</a>
-          <a class="btn btn--primary" href="contact.html">Get in Touch</a>
-        </nav>
+        <div class="menu-wrapper">
+          <div class="menu-toggle">
+            <img src="camera.png" alt="Menu" class="aperture-icon" />
+          </div>
+          <nav class="dropdown-menu" role="navigation">
+            <a href="services.html" class="menu-item">Precision. Emotion. Impact.</a>
+            <a href="our-story.html" class="menu-item">The Focus Behind the Frame</a>
+            <a href="contact.html" class="menu-item">Let's Talk</a>
+          </nav>
+        </div>
       </div>
     </header>
 
     <main>
-      <section class="section" style="padding-top: 120px;">
+      <section class="section" style="padding-top: 180px;">
         <div class="container">
-          <h2>Get in Touch</h2>
-          <form class="contact-form" name="contact">
+          <h2 class="contact-headline">Start the Conversation That Sparks Creation</h2>
+          
+          <div class="contact-info-grid">
+            <div class="contact-info-card">
+              <img src="email.png" alt="" class="contact-info-icon" />
+              <h3>Let's Chat</h3>
+              <p><a href="mailto:info@focusvisuals.pro" class="email-link">info@focusvisuals.pro</a></p>
+            </div>
+            
+            <div class="contact-info-card">
+              <img src="call.png" alt="" class="contact-info-icon" />
+              <h3>Let's Talk</h3>
+              <a href="tel:+15858536287" class="phone-number-link">
+                <div class="phone-number-display">
+                  58585-<span class="letter-num">F<br /><small>3</small></span><span class="letter-num">O<br /><small>6</small></span><span class="letter-num">C<br /><small>2</small></span><span class="letter-num">U<br /><small>8</small></span><span class="letter-num">S<br /><small>7</small></span>
+                </div>
+              </a>
+            </div>
+            
+            <div class="contact-info-card">
+              <img src="location.png" alt="" class="contact-info-icon" />
+              <h3>Let's Meet</h3>
+<p><a href="https://www.google.com/maps/place/Focus+Visuals/@45.5240837,-73.6146649,16z/data=!3m1!4b1!4m6!3m5!1s0x4cc9191cfda7ff9b:0xcc07252f12a27f25!8m2!3d45.52408!4d-73.61209!16s%2Fg%2F11wvkzyb40?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" style="color: var(--text); text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text)'">1083 Ave Van Horne<br />Montreal, QC<br />H2V 1J7</a></p>
+              <a href="#" class="request-visit-btn">Request a Visit</a>
+            </div>
+          </div>
+          
+          <button class="expand-form-btn" id="expandFormBtn">
+            Or...
+          </button>
+          
+          <div class="form-wrapper" id="formWrapper">
+            <form class="contact-form" name="contact" novalidate>
             <div class="grid">
               <label>
-                <span>Name</span>
-                <input type="text" name="name" required />
+                <span>First Name *</span>
+                <input type="text" name="firstName" required />
               </label>
               <label>
-                <span>Email</span>
-                <input type="email" name="email" required />
+                <span>Last Name *</span>
+                <input type="text" name="lastName" required />
               </label>
             </div>
             <label>
-              <span>Message</span>
-              <textarea name="message" rows="5" required></textarea>
+              <span>Business Name *</span>
+              <input type="text" name="businessName" required />
             </label>
-            <button class="btn btn--primary" type="submit">Send</button>
-          </form>
-          <p class="muted">Or email us at <a href="mailto:hello@focusvisuals.pro">hello@focusvisuals.pro</a></p>
-        </div>
+            <div class="phone-grid">
+              <label class="phone-number">
+                <span>Business Phone Number *</span>
+                <input type="tel" name="businessPhone" required />
+              </label>
+              <label class="phone-ext">
+                <span>Ext. * <small>(If you don't have an extension, please enter "0")</small></span>
+                <input type="text" name="extension" required />
+              </label>
+            </div>
+            <label>
+              <span>Business Email Address *</span>
+              <input type="email" name="businessEmail" required />
+            </label>
+            <label>
+              <span>Mobile Phone (Optional)</span>
+              <input type="tel" name="mobilePhone" />
+            </label>
+            <div class="project-type-grid">
+              <label>
+                <span>Project Type *</span>
+                <select name="projectType" required>
+                  <option value="">Select a project type...</option>
+                  <option value="corporate">Corporate Video Production</option>
+                  <option value="promotional">Promotional & Marketing Videos</option>
+                  <option value="training">Training & Internal Communication Videos</option>
+                  <option value="strategy">Strategy & Consulting</option>
+                  <option value="social" disabled>Social Media Content (Coming Soon)</option>
+                  <option value="event" disabled>Event Coverage (Coming Soon)</option>
+                  <option value="other">Other</option>
+                </select>
+              </label>
+              <div class="get-to-know-wrapper">
+                <a href="services.html" class="get-to-know-btn">Get to Know the Project Types</a>
+              </div>
+            </div>
+            <label>
+              <span>Tell Us About Your Project *</span>
+              <textarea name="projectDetails" rows="6" required></textarea>
+            </label>
+            <div class="form-submit">
+              <button class="btn btn--primary" type="submit">Start Your Story</button>
+              </div>
+            </form>
+          </div>
+          </div>
       </section>
     </main>
 
+    <!-- Request Visit Modal -->
+    <div id="visitModal" class="visit-modal">
+      <div class="visit-modal-content">
+        <span class="visit-modal-close">&times;</span>
+        <h3>Request a Visit</h3>
+        <form id="visitForm" class="visit-form" novalidate>
+          <label>
+            <span>Full Name *</span>
+            <input type="text" name="fullName" required />
+          </label>
+          <label>
+            <span>Email Address *</span>
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            <span>Phone Number *</span>
+            <input type="tel" name="phone" required />
+          </label>
+          <button type="submit" class="btn btn--primary">Submit Request</button>
+        </form>
+      </div>
+    </div>
+
     <footer class="site-footer">
       <div class="container">
-        <p>© <span id="year"></span> Focus Visuals</p>
-        <div class="social">
-          <a href="#" aria-label="Instagram">Instagram</a>
-          <a href="#" aria-label="YouTube">YouTube</a>
-          <a href="#" aria-label="TikTok">TikTok</a>
-        </div>
+        <p>© <span id="year"></span> Focus Visuals. All rights reserved.</p>
       </div>
     </footer>
 
+    <!-- Chat Bubble -->
+    <div class="chat-bubble" id="chatBubble" title="Contact Us">
+      <img src="speech-bubble.png" alt="Chat" />
+    </div>
+
+    <!-- Chat Popup -->
+    <div class="chat-popup" id="chatPopup">
+      <div class="chat-popup-header">
+        <h3>Let's Talk</h3>
+        <span class="chat-popup-close" id="chatPopupClose">&times;</span>
+      </div>
+      <div class="chat-popup-body" id="chatPopupBody">
+        <div class="chat-messages" id="chatMessages">
+          <div class="chat-message chat-message-received">
+            <div class="chat-message-text">Hi! 👋 Ready to bring your vision to life?</div>
+          </div>
+        </div>
+        <div class="chat-actions" id="chatActions">
+          <button class="chat-action-btn" id="startConversation">Start a Conversation</button>
+          <a href="services.html" class="chat-action-btn chat-action-btn-secondary">Explore Services</a>
+        </div>
+        <div class="chat-input-wrapper" id="chatInputWrapper" style="display: none;">
+          <input type="text" class="chat-input" id="chatInput" placeholder="Type your message..." />
+          <button class="chat-send-btn" id="chatSendBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="contact-form.js"></script>
+<a class="watermark-badge" href="mailto:info@focusvisuals.pro?subject=My%20take%20on%20your%20website%20design&body=Hi%0A%0AI%20just%20visited%20your%20website%20and%20wanted%20to%20share%20some%20thoughts%20on%20the%20design%20—%20consider%20this%20my%20mini%20director’s%20commentary!%0A%0A🎬%20What%20I%20loved:%0A[Insert%20your%20favorite%20design%20elements%20—%20layout,%20visuals,%20vibe,%20etc.]%0A%0A🛠%20What%20could%20use%20a%20touch-up:%0A[Share%20any%20suggestions%20or%20areas%20that%20felt%20off]%0A%0A💡%20Bonus%20idea:%0A[Got%20a%20creative%20suggestion?%20Drop%20it%20here!]%0A%0AYour%20work%20already%20tells%20powerful%20stories%20—%20just%20thought%20I’d%20help%20fine-tune%20the%20stage%20it’s%20set%20on.%0A%0ACheers,%20%20%0A[Your%20Name]" aria-label="Email us" title="Email us">
+      <div class="watermark-circle">
+        <img src="watermark.png" alt="" class="watermark-icon" />
+        <div class="watermark-text" style="transform: rotate(45deg);">
+          <svg viewBox="0 0 100 100">
+            <defs>
+              <path id="wmTop" d="M50,50 m-34,0 a34,34 0 1,1 68,0 a34,34 0 1,1 -68,0" />
+            </defs>
+            <text text-anchor="middle">
+              <textPath xlink:href="#wmTop" startOffset="25%">we are working on something bigger</textPath>
+            </text>
+            <text text-anchor="middle">
+              <textPath xlink:href="#wmTop" startOffset="75%">any comment's? let us know</textPath>
+            </text>
+          </svg>
+        </div>
+      </div>
+    </a>
+
+    <script src="visit-modal.js"></script>
   </body>
 </html>

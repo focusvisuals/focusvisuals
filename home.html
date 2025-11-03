@@ -12,19 +12,16 @@
     <header class="site-header">
       <div class="container">
         <a class="brand" href="home.html">
-          <img src="logo.svg" alt="Focus Visuals" />
+          <img src="logo.png" alt="Focus Visuals" />
         </a>
         <div class="menu-wrapper">
           <div class="menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
+            <img src="camera.png" alt="Menu" class="aperture-icon" />
           </div>
           <nav class="dropdown-menu" role="navigation">
             <a href="services.html" class="menu-item">Precision. Emotion. Impact.</a>
-            <a href="portfolio.html" class="menu-item">In Their Words</a>
             <a href="our-story.html" class="menu-item">The Focus Behind the Frame</a>
-            <a href="contact.html" class="menu-item">Every Great Story Starts with a Conversation</a>
+            <a href="contact.html" class="menu-item">Let's Talk</a>
           </nav>
         </div>
       </div>
@@ -32,28 +29,22 @@
 
     <main>
       <section class="hero">
+        <div class="bg-video">
+          <video id="bgVideoA" class="bg-video__media is-active" autoplay muted playsinline preload="auto" poster="hero-bg.png"></video>
+          <video id="bgVideoB" class="bg-video__media" autoplay muted playsinline preload="auto" poster="hero-bg.png"></video>
+        </div>
+        <div class="scroll-arrow" id="scrollArrow">
+          <img src="fast-forward-double-right-arrows-symbol.png" alt="Scroll down" />
+        </div>
         <div class="hero-content">
           <div class="hero-text">
-            <h1>
-              <span class="hero-word">LET'S</span>
-              <span class="hero-word">FOCUS</span>
-              <span class="hero-word">ON</span>
-              <span class="hero-word">THE</span>
-              <span class="hero-word">VISUALS</span>
+            <h1 class="hero-headline">
+              <span class="hero-word">LET'S FOCUS ON THE VISUALS</span>
             </h1>
-            <p>Bringing clarity, emotion, and impact to your brand's message.</p>
-            <div class="actions">
-              <a class="btn btn--primary" href="contact.html">Get a quote</a>
-              <a class="btn btn--ghost" href="portfolio.html">View work</a>
+            <p class="hero-subheadline">We bring your message into focus through visuals that connect, inspire, and perform</p>
+            <div class="hero-links">
+              <a href="contact.html" class="hero-link">Every Great Story Starts with a Conversation</a>
             </div>
-          </div>
-          <div class="hero-icon-wrapper">
-            <svg class="hero-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 973.76 148.65">
-              <!-- Play icon paths from icon.svg -->
-              <path class="icon-path icon-path-1" d="M96.15,48.33L17.01,2.65c-3.55-2.05-7.79-2.05-11.34,0C2.12,4.69,0,8.37,0,12.46v81.11h6V12.46c0-1.93,1-3.65,2.67-4.62.84-.48,1.76-.72,2.67-.72s1.83.24,2.67.72l79.14,45.69c1.67.97,2.66,2.69,2.66,4.62s-.99,3.66-2.66,4.63L23,103.28v6.92l73.15-42.23c3.55-2.05,5.66-5.72,5.66-9.82s-2.11-7.77-5.66-9.82Z"/>
-              <path class="icon-path icon-path-2" d="M0,97.13v6.71c0,4.1,2.12,7.77,5.67,9.82.76.44,1.55.79,2.36,1.03v-17.56H0Z"/>
-              <path class="icon-path icon-path-3" d="M11.18,109.19v6.01h.16c.69,0,1.37-.06,2.05-.2,1.25-.22,2.47-.67,3.62-1.34l2.2-1.27v-15.26h-8.03v12.06Z"/>
-            </svg>
           </div>
         </div>
       </section>
@@ -61,14 +52,28 @@
 
     <footer class="site-footer">
       <div class="container">
-        <p>© <span id="year"></span> Focus Visuals</p>
-        <div class="social">
-          <a href="#" aria-label="Instagram">Instagram</a>
-          <a href="#" aria-label="YouTube">YouTube</a>
-          <a href="#" aria-label="TikTok">TikTok</a>
-        </div>
+        <p>© <span id="year"></span> Focus Visuals. All rights reserved.</p>
       </div>
     </footer>
+
+<a class="watermark-badge" href="mailto:info@focusvisuals.pro?subject=My%20take%20on%20your%20website%20design&body=Hi%0A%0AI%20just%20visited%20your%20website%20and%20wanted%20to%20share%20some%20thoughts%20on%20the%20design%20—%20consider%20this%20my%20mini%20director’s%20commentary!%0A%0A🎬%20What%20I%20loved:%0A[Insert%20your%20favorite%20design%20elements%20—%20layout,%20visuals,%20vibe,%20etc.]%0A%0A🛠%20What%20could%20use%20a%20touch-up:%0A[Share%20any%20suggestions%20or%20areas%20that%20felt%20off]%0A%0A💡%20Bonus%20idea:%0A[Got%20a%20creative%20suggestion?%20Drop%20it%20here!]%0A%0AYour%20work%20already%20tells%20powerful%20stories%20—%20just%20thought%20I’d%20help%20fine-tune%20the%20stage%20it’s%20set%20on.%0A%0ACheers,%20%20%0A[Your%20Name]" aria-label="Email us" title="Email us">
+      <div class="watermark-circle">
+        <img src="watermark.png" alt="" class="watermark-icon" />
+        <div class="watermark-text" style="transform: rotate(45deg);">
+          <svg viewBox="0 0 100 100">
+            <defs>
+              <path id="wmTop" d="M50,50 m-34,0 a34,34 0 1,1 68,0 a34,34 0 1,1 -68,0" />
+            </defs>
+            <text text-anchor="middle">
+              <textPath xlink:href="#wmTop" startOffset="25%">we are working on something bigger</textPath>
+            </text>
+            <text text-anchor="middle">
+              <textPath xlink:href="#wmTop" startOffset="75%">any comment's? let us know</textPath>
+            </text>
+          </svg>
+        </div>
+      </div>
+    </a>
 
     <script src="script.js"></script>
   </body>
